@@ -158,24 +158,35 @@
       return;
     }
 
-    var carga = { access_key: WEB3FORMS_KEY, subject: asunto, from_name: 'Web Perfect Solution' };
-    campos.forEach(function (c) { carga[c.etiqueta] = c.valor; });
+    /* FormData en vez de JSON: es una petición "simple", así no hay preflight
+       CORS que pueda fallar. Es además el formato nativo de Web3Forms. */
+    var carga = new FormData();
+    carga.append('access_key', WEB3FORMS_KEY);
+    carga.append('subject', asunto);
+    carga.append('from_name', 'Web Perfect Solution');
+    campos.forEach(function (c) { carga.append(c.etiqueta, c.valor); });
 
     var boton = form.querySelector('[data-via="email"]');
     if (boton) boton.disabled = true;
 
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(carga)
-    })
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: carga })
       .then(function (r) { return r.json(); })
       .then(function (r) {
         if (r && r.success) { mostrar(mensajes.enviado || ''); form.reset(); }
-        else { mostrar(mensajes.error || ''); }
+        else { abrirCorreoManual(asunto, campos); }
       })
-      .catch(function () { mostrar(mensajes.error || ''); })
+      /* Si el servicio no responde, el visitante no se queda sin vía: se le
+         abre el gestor de correo con el mensaje ya escrito. */
+      .catch(function () { abrirCorreoManual(asunto, campos); })
       .then(function () { if (boton) boton.disabled = false; });
+  }
+
+  function abrirCorreoManual(asunto, campos) {
+    var destino = form.getAttribute('data-email') || '';
+    window.location.href = 'mailto:' + destino
+      + '?subject=' + encodeURIComponent(asunto)
+      + '&body=' + encodeURIComponent(cuerpoTexto(campos));
+    mostrar(mensajes.mail || '');
   }
 
   /* --- año en el pie ------------------------------------------------------ */
