@@ -20,6 +20,8 @@ TEL_HUMANO = "939-219-0979"
 TEL_LINK = "+19392190979"
 WA = "19392190979"
 EMAIL = "pseltipo@gmail.com"
+IG_USUARIO = "_2rivera"
+IG_URL = f"https://www.instagram.com/{IG_USUARIO}/"
 # URL donde vive el sitio publicado. Al conectar un dominio propio, cambiar
 # esto y volver a ejecutar build.py: actualiza canonical, hreflang y og:url.
 DOMINIO = "https://bryancampoos.github.io/powersolution"
@@ -112,6 +114,7 @@ SPRITE = '''<svg width="0" height="0" style="position:absolute" aria-hidden="tru
   <symbol id="i-escudo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 4.5 5.5V11c0 5 3.2 9 7.5 10.5 4.3-1.5 7.5-5.5 7.5-10.5V5.5z"/><path d="m9 11.8 2.2 2.2 4-4"/></symbol>
   <symbol id="i-ventana" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><path d="M12 3.5v17M3.5 12h17"/></symbol>
   <symbol id="i-regla" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.6 2.6 21.4 8.4a2 2 0 0 1 0 2.8L11.2 21.4a2 2 0 0 1-2.8 0L2.6 15.6a2 2 0 0 1 0-2.8L12.8 2.6a2 2 0 0 1 2.8 0z"/><path d="m7 11 2 2M10 8l2 2M13 5l2 2"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.15" fill="currentColor" stroke="none"/></symbol>
 </defs></svg>'''
 
 
@@ -307,6 +310,7 @@ def pie(idioma):
           <li><a href="tel:{TEL_LINK}">{TEL_HUMANO}</a></li>
           <li><a href="https://wa.me/{WA}" target="_blank" rel="noopener">WhatsApp</a></li>
           <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
+          <li><a href="{IG_URL}" target="_blank" rel="noopener">Instagram @{IG_USUARIO}</a></li>
           <li>{T["area"][idioma]}</li>
         </ul>
       </div>
@@ -434,6 +438,7 @@ JSONLD_HOME = '''<script type="application/ld+json">
   "telephone": "+1-939-219-0979",
   "email": "%(e)s",
   "priceRange": "$$",
+  "sameAs": [ "%(ig)s" ],
   "founder": { "@type": "Person", "name": "Michaell J. Rivera" },
   "address": { "@type": "PostalAddress", "addressRegion": "PR", "addressCountry": "US" },
   "areaServed": [
@@ -454,7 +459,7 @@ JSONLD_HOME = '''<script type="application/ld+json">
   }
 }
 </script>
-''' % {"d": DOMINIO, "e": EMAIL}
+''' % {"d": DOMINIO, "e": EMAIL, "ig": IG_URL}
 
 META = {
     "home": {
@@ -1188,6 +1193,10 @@ def contacto(idioma):
           <li>
             {icono("mail")}
             <div><strong>{d_mail}</strong><a href="mailto:{EMAIL}">{EMAIL}</a></div>
+          </li>
+          <li>
+            {icono("ig")}
+            <div><strong>Instagram</strong><a href="{IG_URL}" target="_blank" rel="noopener">@{IG_USUARIO}</a></div>
           </li>
           <li>
             {icono("mapa")}
