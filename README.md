@@ -101,6 +101,22 @@ A partir de ahí el botón de correo envía el mensaje de verdad, el visitante n
 la página y a ti te llega el correo al instante. Si la clave se queda vacía, el botón
 sigue funcionando con el gestor de correo — no se rompe nada.
 
+### El día que cambies de hosting
+
+Esto no depende de GitHub, sino de que el sitio sea estático: son archivos que el
+servidor entrega tal cual, sin ejecutar nada. Enviar un correo necesita algo corriendo
+en el servidor. Según dónde acabe el sitio:
+
+| Destino | Qué hacer |
+|---|---|
+| Hosting con **PHP** (Hostinger, GoDaddy, SiteGround, cPanel…) | Lo mejor. Un `enviar.php` de unas 15 líneas envía directo, sin servicios externos ni límite de envíos. Ya no hace falta Web3Forms |
+| **Netlify** | Trae formularios integrados: se activan con un atributo en el `<form>`. 100 envíos al mes gratis y quedan guardados en un panel |
+| **Cloudflare Pages** o **Vercel** | Funcionan, pero hay que escribir una función serverless |
+| Otro hosting **estático** | Igual que ahora: Web3Forms es la vía |
+
+Web3Forms sirve en todos los casos, así que es la opción segura mientras no esté decidido.
+Cambiar después a la solución propia del hosting es cuestión de minutos.
+
 ---
 
 ## El logo
