@@ -82,7 +82,7 @@
    * (piden el email de destino y la mandan ahí; no hay que crear cuenta) y
    * pégala abajo en WEB3FORMS_KEY. Es la única línea que hay que tocar.
    * ----------------------------------------------------------------------- */
-  var WEB3FORMS_KEY = '';
+  var WEB3FORMS_KEY = '3ef661e0-eccb-4c9e-9ef8-05a03ce8f244';
 
   var form = document.querySelector('[data-form-contacto]');
 
