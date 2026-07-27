@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900"
+     width="1200" height="900" role="img" aria-label="Techos y exterior">
+  <rect width="1200" height="900" fill="#FBEADC"/>
+  <rect x="14" y="14" width="1172" height="872" rx="18" fill="none"
+        stroke="#EF6C33" stroke-width="3" stroke-dasharray="14 12" opacity=".55"/>
+  <g transform="translate(564.0 354.0) scale(3)" fill="none" stroke="#EF6C33"
+     stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 4.5 8.1 6H5.2A2.2 2.2 0 0 0 3 8.2v9.6A2.2 2.2 0 0 0 5.2 20h13.6a2.2 2.2 0 0 0 2.2-2.2V8.2A2.2 2.2 0 0 0 18.8 6h-2.9L15 4.5Z"/><circle cx="12" cy="13.2" r="3.8"/>
+  </g>
+  <text x="600.0" y="488.0" text-anchor="middle" fill="#6B2F15"
+        font-family="Archivo, system-ui, sans-serif" font-size="40"
+        font-weight="700">Techos y exterior</text>
+  <text x="600.0" y="536.0" text-anchor="middle" fill="#9A7B66"
+        font-family="Inter, system-ui, sans-serif" font-size="27">Pendiente de sustituir por una foto real del trabajo</text>
+</svg>

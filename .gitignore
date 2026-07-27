@@ -1,0 +1,15 @@
+# Material de trabajo: no forma parte del sitio publicado.
+# Las fotos originales del cliente y las versiones aun no colocadas se quedan
+# solo en local — el repositorio es publico.
+assets/img/originales/
+assets/img/procesadas/
+
+# Utilidades locales
+_generador/qr-*.png
+__pycache__/
+*.pyc
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

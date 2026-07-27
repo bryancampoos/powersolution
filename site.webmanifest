@@ -1,0 +1,16 @@
+{
+  "name": "Perfect Solution by Michaell J. Rivera",
+  "short_name": "Perfect Solution",
+  "description": "Contratista general en el Área Metro y Sur de Puerto Rico.",
+  "lang": "es-PR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFF6ED",
+  "theme_color": "#6B2F15",
+  "icons": [
+    { "src": "assets/logo/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/logo/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/logo/isotipo.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
