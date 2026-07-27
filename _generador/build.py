@@ -19,7 +19,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEL_HUMANO = "939-219-0979"
 TEL_LINK = "+19392190979"
 WA = "19392190979"
-EMAIL = "pseltipo@gmail.com"
+EMAIL = "pseltipo@outlook.com"
 IG_USUARIO = "_2rivera"
 IG_URL = f"https://www.instagram.com/{IG_USUARIO}/"
 # URL donde vive el sitio publicado. Al conectar un dominio propio, cambiar
@@ -1062,8 +1062,8 @@ def contacto(idioma):
         bajada = ("Cuéntanos qué necesitas y coordinamos la visita. "
                   "El presupuesto no te cuesta nada.")
         h2_form = "Pide tu cotización"
-        p_form = ("Llena esto y se abre WhatsApp con tu mensaje ya escrito. "
-                  "También puedes escribirnos directo o llamar.")
+        p_form = ("Llénalo una sola vez y elige cómo enviarlo: por WhatsApp o "
+                  "por correo. En los dos casos el mensaje va ya redactado.")
         etiquetas = {
             "saludo": "Hola Michaell, le escribo desde la página web.",
             "nombre": "Nombre", "telefono": "Teléfono", "pueblo": "Pueblo",
@@ -1079,9 +1079,18 @@ def contacto(idioma):
         elegir = "Elige una opción"
         ayuda_msg = ("Mientras más detalles, mejor la cotización. Si tienes fotos, "
                      "puedes enviarlas por WhatsApp después.")
-        enviar = "Enviar por WhatsApp"
-        ok = ("Se abrió WhatsApp con tu mensaje. Si no se abrió, escríbenos directo "
-              "al 939-219-0979.")
+        enviar_wa = "Enviar por WhatsApp"
+        enviar_mail = "Enviar por correo"
+        asunto = "Cotización desde la página web"
+        msg = {
+            "wa": ("Se abrió WhatsApp con tu mensaje. Si no se abrió, escríbenos "
+                   f"directo al {TEL_HUMANO}."),
+            "mail": ("Se abrió tu correo con el mensaje listo: solo falta que le des "
+                     f"a enviar. Si no se abrió, escríbenos a {EMAIL}."),
+            "enviado": ("Mensaje enviado. Te contestamos lo antes posible."),
+            "error": (f"No se pudo enviar. Escríbenos por WhatsApp al {TEL_HUMANO} "
+                      f"o a {EMAIL}."),
+        }
         h2_datos = "Escríbenos directo"
         d_tel, d_wa, d_mail, d_area = "Teléfono", "WhatsApp", "Correo", "Área de servicio"
         v_area = "Área Metro y región Sur de Puerto Rico"
@@ -1093,8 +1102,8 @@ def contacto(idioma):
         bajada = ("Tell us what you need and we'll set up the visit. "
                   "The estimate costs you nothing.")
         h2_form = "Request your quote"
-        p_form = ("Fill this in and WhatsApp opens with your message ready to send. "
-                  "You can also message or call us directly.")
+        p_form = ("Fill it in once and pick how to send it: over WhatsApp or by "
+                  "email. Either way the message comes already written.")
         etiquetas = {
             "saludo": "Hi Michaell, I'm writing from your website.",
             "nombre": "Name", "telefono": "Phone", "pueblo": "Town",
@@ -1110,9 +1119,18 @@ def contacto(idioma):
         elegir = "Choose an option"
         ayuda_msg = ("The more detail, the better the quote. If you have photos, you can "
                      "send them over WhatsApp afterwards.")
-        enviar = "Send via WhatsApp"
-        ok = ("WhatsApp opened with your message. If it didn't, message us directly "
-              "at 939-219-0979.")
+        enviar_wa = "Send via WhatsApp"
+        enviar_mail = "Send by email"
+        asunto = "Quote request from the website"
+        msg = {
+            "wa": ("WhatsApp opened with your message. If it didn't, message us "
+                   f"directly at {TEL_HUMANO}."),
+            "mail": ("Your email app opened with the message ready — just hit send. "
+                     f"If it didn't, write to us at {EMAIL}."),
+            "enviado": "Message sent. We'll get back to you as soon as we can.",
+            "error": (f"It couldn't be sent. Message us on WhatsApp at {TEL_HUMANO} "
+                      f"or at {EMAIL}."),
+        }
         h2_datos = "Reach us directly"
         d_tel, d_wa, d_mail, d_area = "Phone", "WhatsApp", "Email", "Service area"
         v_area = "San Juan metro area and southern Puerto Rico"
@@ -1122,6 +1140,7 @@ def contacto(idioma):
 
     import json
     et_json = json.dumps(etiquetas, ensure_ascii=False).replace('"', "&quot;")
+    msg_json = json.dumps(msg, ensure_ascii=False).replace('"', "&quot;")
     ops = "".join(f'            <option>{o}</option>\n' for o in opciones)
 
     return head(idioma, "contacto", *META["contacto"][idioma]) \
@@ -1133,7 +1152,11 @@ def contacto(idioma):
         <h2>{h2_form}</h2>
         <p style="margin-bottom:28px">{p_form}</p>
 
-        <form class="formulario" data-form-whatsapp data-etiquetas="{et_json}">
+        <form class="formulario" data-form-contacto
+              data-etiquetas="{et_json}"
+              data-mensajes="{msg_json}"
+              data-email="{EMAIL}"
+              data-asunto="{asunto}">
           <div class="formulario__fila">
             <div class="campo">
               <label for="nombre">{campos["nombre"]} <span aria-label="{obligatorio}">*</span></label>
@@ -1169,13 +1192,17 @@ def contacto(idioma):
           </div>
 
           <div class="grupo-btn">
-            <button class="btn btn--wa" type="submit">
+            <button class="btn btn--wa" type="submit" data-via="whatsapp">
               {icono("wa")}
-              {enviar}
+              {enviar_wa}
+            </button>
+            <button class="btn btn--primario" type="submit" data-via="email">
+              {icono("mail")}
+              {enviar_mail}
             </button>
           </div>
 
-          <p class="aviso" data-form-ok hidden>{ok}</p>
+          <p class="aviso" data-form-aviso hidden></p>
         </form>
       </div>
 

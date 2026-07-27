@@ -16,7 +16,7 @@
 | Posicionamiento acordado | **Contratista general y remodelaciones**, con los servicios del logo como base |
 | Mercado | Área Metro y región Sur de Puerto Rico |
 | Teléfono / WhatsApp | 939-219-0979 |
-| Correo | pseltipo@gmail.com |
+| Correo | pseltipo@outlook.com |
 | Trayectoria | 2 años |
 
 ### Paleta (medida sobre el logo, no estimada)
@@ -234,11 +234,17 @@ perfect-solution/
 - **SEO local:** JSON-LD de tipo `LocalBusiness` con nombre, teléfono, dirección, horario,
   área de servicio y redes. `<title>` y `meta description` únicos por página. Open Graph
   para que el enlace se vea bien al compartirlo por WhatsApp.
-- Formulario de contacto: **resuelto sin backend**. El formulario arma el mensaje con los
-  campos y abre WhatsApp con el texto ya escrito. No hay servidor, ni servicio de correo,
-  ni coste mensual, y el mensaje llega al canal que el negocio ya usa. Lleva honeypot
-  antispam. Si algún día se prefiere recibirlo por email, se cambia por un `action` de
-  Formspree — está comentado en `assets/js/main.js`.
+- Formulario de contacto: **resuelto sin backend, con dos vías de envío**. El visitante
+  llena los campos una vez y elige botón:
+  - *Enviar por WhatsApp* → abre el chat con el mensaje redactado.
+  - *Enviar por correo* → abre el gestor de correo del visitante con todo escrito.
+
+  Lleva honeypot antispam. Ninguna de las dos vías tiene coste ni mantenimiento.
+
+  ⚠️ Limitación del correo: depende de que el visitante tenga gestor configurado y le dé
+  a enviar. Hay preparada una tercera vía que sí entrega directo — Web3Forms, gratis y sin
+  cuenta: basta pegar la clave en `WEB3FORMS_KEY` dentro de `assets/js/main.js` y el botón
+  pasa a enviar por AJAX sin sacar al visitante de la página. Instrucciones en el README.
 
 ---
 
@@ -247,7 +253,7 @@ perfect-solution/
 **Confirmado y ya puesto en el sitio**
 
 - [x] Teléfono y WhatsApp — 939-219-0979
-- [x] Correo — pseltipo@gmail.com
+- [x] Correo — pseltipo@outlook.com
 - [x] Región — Área Metro y Sur
 - [x] Trayectoria — 2 años
 - [x] Lista de servicios (sin eléctrico, según tu corrección del brief)

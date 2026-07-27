@@ -66,14 +66,40 @@ redes sociales y la lista definitiva de pueblos.
 ## Cambios frecuentes
 
 **Teléfono, WhatsApp o correo:** aparecen en varios sitios de cada página. Busca y
-reemplaza `939-219-0979`, `19392190979` (el del enlace de WhatsApp) y `pseltipo@gmail.com`.
+reemplaza `939-219-0979`, `19392190979` (el del enlace de WhatsApp) y `pseltipo@outlook.com`.
 
 **Colores:** están todos al principio de `assets/css/styles.css`, en el bloque `:root`.
 Cambiando ahí un valor, cambia en todo el sitio.
 
-**El formulario de contacto** no necesita servidor: arma el mensaje con lo que se escribe
-y abre WhatsApp con el texto listo para enviar. Si algún día prefieres recibirlo por
-correo, hay instrucciones en el comentario dentro de `assets/js/main.js`.
+---
+
+## El formulario de contacto
+
+El visitante llena los campos una sola vez y elige cómo mandarlo:
+
+- **Enviar por WhatsApp** — abre el chat con el mensaje ya redactado.
+- **Enviar por correo** — abre el gestor de correo del visitante (Gmail, Outlook, la app
+  del teléfono…) con destinatario, asunto y cuerpo escritos. Solo tiene que darle a enviar.
+
+Ninguna de las dos necesita servidor, así que no hay coste ni nada que mantener.
+
+### Que el correo llegue solo
+
+El botón de correo tiene un pero: depende de que el visitante tenga un gestor de correo
+configurado y de que le dé a enviar. Si abandona ahí, el mensaje no llega y tú ni te
+enteras. En el teléfono suele funcionar bien; en computadora falla más a menudo.
+
+Para que el correo llegue directo sin depender de eso, hay una vía ya preparada:
+
+1. Entra en **[web3forms.com](https://web3forms.com)** y escribe `pseltipo@outlook.com`.
+   Te mandan una clave por correo. No hay que crear cuenta ni pagar nada.
+2. Abre `assets/js/main.js`, busca la línea `var WEB3FORMS_KEY = '';`
+   y pega la clave entre las comillas.
+3. Sube el cambio.
+
+A partir de ahí el botón de correo envía el mensaje de verdad, el visitante no sale de
+la página y a ti te llega el correo al instante. Si la clave se queda vacía, el botón
+sigue funcionando con el gestor de correo — no se rompe nada.
 
 ---
 

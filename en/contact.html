@@ -104,9 +104,13 @@
     <div class="contenedor dos-col dos-col--arriba">
       <div class="revelar">
         <h2>Request your quote</h2>
-        <p style="margin-bottom:28px">Fill this in and WhatsApp opens with your message ready to send. You can also message or call us directly.</p>
+        <p style="margin-bottom:28px">Fill it in once and pick how to send it: over WhatsApp or by email. Either way the message comes already written.</p>
 
-        <form class="formulario" data-form-whatsapp data-etiquetas="{&quot;saludo&quot;: &quot;Hi Michaell, I'm writing from your website.&quot;, &quot;nombre&quot;: &quot;Name&quot;, &quot;telefono&quot;: &quot;Phone&quot;, &quot;pueblo&quot;: &quot;Town&quot;, &quot;servicio&quot;: &quot;Service&quot;, &quot;mensaje&quot;: &quot;Details&quot;}">
+        <form class="formulario" data-form-contacto
+              data-etiquetas="{&quot;saludo&quot;: &quot;Hi Michaell, I'm writing from your website.&quot;, &quot;nombre&quot;: &quot;Name&quot;, &quot;telefono&quot;: &quot;Phone&quot;, &quot;pueblo&quot;: &quot;Town&quot;, &quot;servicio&quot;: &quot;Service&quot;, &quot;mensaje&quot;: &quot;Details&quot;}"
+              data-mensajes="{&quot;wa&quot;: &quot;WhatsApp opened with your message. If it didn't, message us directly at 939-219-0979.&quot;, &quot;mail&quot;: &quot;Your email app opened with the message ready — just hit send. If it didn't, write to us at pseltipo@outlook.com.&quot;, &quot;enviado&quot;: &quot;Message sent. We'll get back to you as soon as we can.&quot;, &quot;error&quot;: &quot;It couldn't be sent. Message us on WhatsApp at 939-219-0979 or at pseltipo@outlook.com.&quot;}"
+              data-email="pseltipo@outlook.com"
+              data-asunto="Quote request from the website">
           <div class="formulario__fila">
             <div class="campo">
               <label for="nombre">Name <span aria-label="required">*</span></label>
@@ -149,13 +153,17 @@
           </div>
 
           <div class="grupo-btn">
-            <button class="btn btn--wa" type="submit">
+            <button class="btn btn--wa" type="submit" data-via="whatsapp">
               <svg aria-hidden="true"><use href="#i-wa"/></svg>
               Send via WhatsApp
             </button>
+            <button class="btn btn--primario" type="submit" data-via="email">
+              <svg aria-hidden="true"><use href="#i-mail"/></svg>
+              Send by email
+            </button>
           </div>
 
-          <p class="aviso" data-form-ok hidden>WhatsApp opened with your message. If it didn't, message us directly at 939-219-0979.</p>
+          <p class="aviso" data-form-aviso hidden></p>
         </form>
       </div>
 
@@ -172,7 +180,7 @@
           </li>
           <li>
             <svg aria-hidden="true"><use href="#i-mail"/></svg>
-            <div><strong>Email</strong><a href="mailto:pseltipo@gmail.com">pseltipo@gmail.com</a></div>
+            <div><strong>Email</strong><a href="mailto:pseltipo@outlook.com">pseltipo@outlook.com</a></div>
           </li>
           <li>
             <svg aria-hidden="true"><use href="#i-ig"/></svg>
@@ -251,7 +259,7 @@
         <ul>
           <li><a href="tel:+19392190979">939-219-0979</a></li>
           <li><a href="https://wa.me/19392190979" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="mailto:pseltipo@gmail.com">pseltipo@gmail.com</a></li>
+          <li><a href="mailto:pseltipo@outlook.com">pseltipo@outlook.com</a></li>
           <li><a href="https://www.instagram.com/_2rivera/" target="_blank" rel="noopener">Instagram @_2rivera</a></li>
           <li>San Juan Metro & Southern PR</li>
         </ul>

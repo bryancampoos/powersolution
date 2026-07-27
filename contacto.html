@@ -104,9 +104,13 @@
     <div class="contenedor dos-col dos-col--arriba">
       <div class="revelar">
         <h2>Pide tu cotización</h2>
-        <p style="margin-bottom:28px">Llena esto y se abre WhatsApp con tu mensaje ya escrito. También puedes escribirnos directo o llamar.</p>
+        <p style="margin-bottom:28px">Llénalo una sola vez y elige cómo enviarlo: por WhatsApp o por correo. En los dos casos el mensaje va ya redactado.</p>
 
-        <form class="formulario" data-form-whatsapp data-etiquetas="{&quot;saludo&quot;: &quot;Hola Michaell, le escribo desde la página web.&quot;, &quot;nombre&quot;: &quot;Nombre&quot;, &quot;telefono&quot;: &quot;Teléfono&quot;, &quot;pueblo&quot;: &quot;Pueblo&quot;, &quot;servicio&quot;: &quot;Servicio&quot;, &quot;mensaje&quot;: &quot;Detalles&quot;}">
+        <form class="formulario" data-form-contacto
+              data-etiquetas="{&quot;saludo&quot;: &quot;Hola Michaell, le escribo desde la página web.&quot;, &quot;nombre&quot;: &quot;Nombre&quot;, &quot;telefono&quot;: &quot;Teléfono&quot;, &quot;pueblo&quot;: &quot;Pueblo&quot;, &quot;servicio&quot;: &quot;Servicio&quot;, &quot;mensaje&quot;: &quot;Detalles&quot;}"
+              data-mensajes="{&quot;wa&quot;: &quot;Se abrió WhatsApp con tu mensaje. Si no se abrió, escríbenos directo al 939-219-0979.&quot;, &quot;mail&quot;: &quot;Se abrió tu correo con el mensaje listo: solo falta que le des a enviar. Si no se abrió, escríbenos a pseltipo@outlook.com.&quot;, &quot;enviado&quot;: &quot;Mensaje enviado. Te contestamos lo antes posible.&quot;, &quot;error&quot;: &quot;No se pudo enviar. Escríbenos por WhatsApp al 939-219-0979 o a pseltipo@outlook.com.&quot;}"
+              data-email="pseltipo@outlook.com"
+              data-asunto="Cotización desde la página web">
           <div class="formulario__fila">
             <div class="campo">
               <label for="nombre">Nombre <span aria-label="obligatorio">*</span></label>
@@ -149,13 +153,17 @@
           </div>
 
           <div class="grupo-btn">
-            <button class="btn btn--wa" type="submit">
+            <button class="btn btn--wa" type="submit" data-via="whatsapp">
               <svg aria-hidden="true"><use href="#i-wa"/></svg>
               Enviar por WhatsApp
             </button>
+            <button class="btn btn--primario" type="submit" data-via="email">
+              <svg aria-hidden="true"><use href="#i-mail"/></svg>
+              Enviar por correo
+            </button>
           </div>
 
-          <p class="aviso" data-form-ok hidden>Se abrió WhatsApp con tu mensaje. Si no se abrió, escríbenos directo al 939-219-0979.</p>
+          <p class="aviso" data-form-aviso hidden></p>
         </form>
       </div>
 
@@ -172,7 +180,7 @@
           </li>
           <li>
             <svg aria-hidden="true"><use href="#i-mail"/></svg>
-            <div><strong>Correo</strong><a href="mailto:pseltipo@gmail.com">pseltipo@gmail.com</a></div>
+            <div><strong>Correo</strong><a href="mailto:pseltipo@outlook.com">pseltipo@outlook.com</a></div>
           </li>
           <li>
             <svg aria-hidden="true"><use href="#i-ig"/></svg>
@@ -251,7 +259,7 @@
         <ul>
           <li><a href="tel:+19392190979">939-219-0979</a></li>
           <li><a href="https://wa.me/19392190979" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="mailto:pseltipo@gmail.com">pseltipo@gmail.com</a></li>
+          <li><a href="mailto:pseltipo@outlook.com">pseltipo@outlook.com</a></li>
           <li><a href="https://www.instagram.com/_2rivera/" target="_blank" rel="noopener">Instagram @_2rivera</a></li>
           <li>Área Metro y Sur, PR</li>
         </ul>
