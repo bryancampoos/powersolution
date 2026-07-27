@@ -3,40 +3,40 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://bryancampoos.github.io/perfect-solution/</loc>
-    <xhtml:link rel="alternate" hreflang="es-pr" href="https://bryancampoos.github.io/perfect-solution/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bryancampoos.github.io/perfect-solution/en/"/>
+    <loc>https://bryancampoos.github.io/powersolution/</loc>
+    <xhtml:link rel="alternate" hreflang="es-pr" href="https://bryancampoos.github.io/powersolution/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bryancampoos.github.io/powersolution/en/"/>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bryancampoos.github.io/perfect-solution/servicios.html</loc>
-    <xhtml:link rel="alternate" hreflang="es-pr" href="https://bryancampoos.github.io/perfect-solution/servicios.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bryancampoos.github.io/perfect-solution/en/services.html"/>
+    <loc>https://bryancampoos.github.io/powersolution/servicios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-pr" href="https://bryancampoos.github.io/powersolution/servicios.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bryancampoos.github.io/powersolution/en/services.html"/>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://bryancampoos.github.io/perfect-solution/proyectos.html</loc>
-    <xhtml:link rel="alternate" hreflang="es-pr" href="https://bryancampoos.github.io/perfect-solution/proyectos.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bryancampoos.github.io/perfect-solution/en/projects.html"/>
+    <loc>https://bryancampoos.github.io/powersolution/proyectos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-pr" href="https://bryancampoos.github.io/powersolution/proyectos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bryancampoos.github.io/powersolution/en/projects.html"/>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bryancampoos.github.io/perfect-solution/nosotros.html</loc>
-    <xhtml:link rel="alternate" hreflang="es-pr" href="https://bryancampoos.github.io/perfect-solution/nosotros.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bryancampoos.github.io/perfect-solution/en/about.html"/>
+    <loc>https://bryancampoos.github.io/powersolution/nosotros.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-pr" href="https://bryancampoos.github.io/powersolution/nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bryancampoos.github.io/powersolution/en/about.html"/>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bryancampoos.github.io/perfect-solution/contacto.html</loc>
-    <xhtml:link rel="alternate" hreflang="es-pr" href="https://bryancampoos.github.io/perfect-solution/contacto.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://bryancampoos.github.io/perfect-solution/en/contact.html"/>
+    <loc>https://bryancampoos.github.io/powersolution/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es-pr" href="https://bryancampoos.github.io/powersolution/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bryancampoos.github.io/powersolution/en/contact.html"/>
     <priority>0.9</priority>
   </url>
 
-  <url><loc>https://bryancampoos.github.io/perfect-solution/en/</loc><priority>0.8</priority></url>
-  <url><loc>https://bryancampoos.github.io/perfect-solution/en/services.html</loc><priority>0.7</priority></url>
-  <url><loc>https://bryancampoos.github.io/perfect-solution/en/projects.html</loc><priority>0.6</priority></url>
-  <url><loc>https://bryancampoos.github.io/perfect-solution/en/about.html</loc><priority>0.5</priority></url>
-  <url><loc>https://bryancampoos.github.io/perfect-solution/en/contact.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bryancampoos.github.io/powersolution/en/</loc><priority>0.8</priority></url>
+  <url><loc>https://bryancampoos.github.io/powersolution/en/services.html</loc><priority>0.7</priority></url>
+  <url><loc>https://bryancampoos.github.io/powersolution/en/projects.html</loc><priority>0.6</priority></url>
+  <url><loc>https://bryancampoos.github.io/powersolution/en/about.html</loc><priority>0.5</priority></url>
+  <url><loc>https://bryancampoos.github.io/powersolution/en/contact.html</loc><priority>0.7</priority></url>
 
 </urlset>

@@ -22,7 +22,7 @@ WA = "19392190979"
 EMAIL = "pseltipo@gmail.com"
 # URL donde vive el sitio publicado. Al conectar un dominio propio, cambiar
 # esto y volver a ejecutar build.py: actualiza canonical, hreflang y og:url.
-DOMINIO = "https://bryancampoos.github.io/perfect-solution"
+DOMINIO = "https://bryancampoos.github.io/powersolution"
 
 PUEBLOS = [
     "San Juan", "Bayamón", "Guaynabo", "Carolina", "Trujillo Alto", "Cataño",

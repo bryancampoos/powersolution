@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /_generador/
 
-Sitemap: https://bryancampoos.github.io/perfect-solution/sitemap.xml
+Sitemap: https://bryancampoos.github.io/powersolution/sitemap.xml
