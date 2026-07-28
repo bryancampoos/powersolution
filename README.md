@@ -83,23 +83,21 @@ El visitante llena los campos una sola vez y elige cómo mandarlo:
 
 Ninguna de las dos necesita servidor, así que no hay coste ni nada que mantener.
 
-### Que el correo llegue solo
+### Cómo llega el correo
 
-El botón de correo tiene un pero: depende de que el visitante tenga un gestor de correo
-configurado y de que le dé a enviar. Si abandona ahí, el mensaje no llega y tú ni te
-enteras. En el teléfono suele funcionar bien; en computadora falla más a menudo.
+El botón de correo usa **Web3Forms**, ya configurado y probado. El mensaje se envía
+directo a `pseltipo@outlook.com` sin que el visitante salga de la página.
 
-Para que el correo llegue directo sin depender de eso, hay una vía ya preparada:
+La clave está en `assets/js/main.js`, en `WEB3FORMS_KEY`. Es visible en el código y eso
+es correcto: Web3Forms la diseñó para usarse desde el navegador, va ligada al dominio
+registrado y no da acceso a nada de la cuenta.
 
-1. Entra en **[web3forms.com](https://web3forms.com)** y escribe `pseltipo@outlook.com`.
-   Te mandan una clave por correo. No hay que crear cuenta ni pagar nada.
-2. Abre `assets/js/main.js`, busca la línea `var WEB3FORMS_KEY = '';`
-   y pega la clave entre las comillas.
-3. Sube el cambio.
+Si algún día el servicio no respondiera, el formulario no deja al visitante colgado:
+abre su gestor de correo con el mensaje ya escrito, como respaldo.
 
-A partir de ahí el botón de correo envía el mensaje de verdad, el visitante no sale de
-la página y a ti te llega el correo al instante. Si la clave se queda vacía, el botón
-sigue funcionando con el gestor de correo — no se rompe nada.
+**Panel de mensajes:** entrando en [web3forms.com](https://web3forms.com) con
+`pseltipo@outlook.com` se ven todos los envíos recibidos, por si algún correo se
+perdiera o cayera en no deseado.
 
 ### El día que cambies de hosting
 

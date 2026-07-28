@@ -241,10 +241,13 @@ perfect-solution/
 
   Lleva honeypot antispam. Ninguna de las dos vías tiene coste ni mantenimiento.
 
-  ⚠️ Limitación del correo: depende de que el visitante tenga gestor configurado y le dé
-  a enviar. Hay preparada una tercera vía que sí entrega directo — Web3Forms, gratis y sin
-  cuenta: basta pegar la clave en `WEB3FORMS_KEY` dentro de `assets/js/main.js` y el botón
-  pasa a enviar por AJAX sin sacar al visitante de la página. Instrucciones en el README.
+  El botón de correo entrega directo vía **Web3Forms** (configurado y probado): el mensaje
+  llega a `pseltipo@outlook.com` sin que el visitante salga de la página. Si el servicio
+  fallara, el formulario abre el gestor de correo del visitante como respaldo, así que
+  nunca se queda sin vía de contacto.
+
+  Al mover el sitio a un hosting con PHP conviene sustituirlo por un `enviar.php` propio:
+  quita la dependencia externa y el límite de envíos. Ver la tabla del README.
 
 ---
 
